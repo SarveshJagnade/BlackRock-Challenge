@@ -236,14 +236,8 @@ Build Image
 docker build -t blk-hacking-ind-sarvesh-jagnade .
 Run Container
 docker run -d -p 5477:5477 blk-hacking-ind-sarvesh-jagnade
-
-Application runs on:
-
-http://localhost:5477
-🧪 Testing
-
-Tests are located in /test.
-
+ 
+ 
 Each test file contains:
 
 Test type
