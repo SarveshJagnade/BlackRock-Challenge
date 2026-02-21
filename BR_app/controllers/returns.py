@@ -10,6 +10,11 @@ class Returns:
         self.return_service = ReturnService()
         self.temp_service = TemporalService()
     
+    async def calculate_index(self,request):
+        try : 
+            return await self.return_service.calculate_index_returns(request)
+        except Exception as e : 
+            return JSONResponse(content={"message": f"{str(e)}"},status_code=500)
     async def calculate_nps(self, request: ReturnsRequest):
         try :
             result = []  

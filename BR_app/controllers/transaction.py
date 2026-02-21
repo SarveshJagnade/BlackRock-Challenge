@@ -8,7 +8,7 @@ class Transaction:
         self.transaction_service = TransactionService()
  
     async def parse_transactions(self,expenses: list[Expense]):
-        try :
+        try : 
             return await self.transaction_service.parse_transactions(expenses)
         except Exception as e :
             return JSONResponse(content={"message": f"{str(e)}"},status_code=500)

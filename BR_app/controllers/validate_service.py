@@ -7,7 +7,7 @@ class Validation:
         self.val_service = ValidationService() 
 
     async def validate_transactions(self,request: TransactionValidatorRequest):
-        try :
-            return await ValidationService.validate_transactions( request.wage,request.transactions)
-        except Exception as e :
+        try : 
+            return await self.val_service.validate_transactions( request.wage,request.transactions)
+        except Exception as e : 
             return JSONResponse(content={"message": f"{str(e)}"},status_code=500)
